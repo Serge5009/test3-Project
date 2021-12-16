@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Rotator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float turnSpeed = 30f;
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
     }
 }
