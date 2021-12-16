@@ -9,8 +9,10 @@ public class BoxMover : MonoBehaviour
     
     void Update()
     {
-        var movement = Input.GetAxis("Horizontal");
-        transform.position += Vector3.right * movement * speed;
+        var horizontalMovement = Input.GetAxis("Horizontal");
+        transform.position += Vector3.right * horizontalMovement * speed;
 
+        var verticalMovement = Input.GetAxis("Vertical");
+        transform.position += Vector3.up * verticalMovement * speed;
     }
 }
